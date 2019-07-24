@@ -127,8 +127,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinarySearchTree.cs" />
-    <Compile Include="Node.cs" />
+    <Compile Include="BinarySearchTree1.cs" />
+    <Compile Include="Node1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

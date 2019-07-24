@@ -24,7 +24,7 @@ namespace BinarySearchTree
         public void Add(Node node)
         {
 
-            if (root == null) 
+            if (root == null)
             {
                 root = node;
                 return;
@@ -62,11 +62,50 @@ namespace BinarySearchTree
                         temp = temp.right;
                     }
                 }
+
             }
         }
 
         public void Search(Node node)
         {
+            if (root == null)
+            {
+                root = node;
+                return;
+            }
+
+            temp = root;
+
+            while (true)
+            {
+                if (node.data <= temp.data)
+                {
+                    if (temp.left == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        temp.left = node;
+                        break;
+                    }
+                }
+
+               else
+                {
+                    if (temp.right == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        temp.right = node;
+                        break;
+                    }
+                }
+
+            }
+
 
         }
     }
