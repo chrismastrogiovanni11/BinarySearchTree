@@ -10,21 +10,63 @@ namespace BinarySearchTree
     {
         
         public Node root;
-        //LinkedList<int> binaryList = new LinkedList<int>();
 
-
+        public Node temp;
 
         public BinarySearchTree()
         {
+            root = null;
+            temp = null;
+
             
         }
 
-        public void Add(int number)
+        public void Add(Node node)
         {
 
-           //Console.WriteLine("enter number");
-            //number = int.Parse(Console.ReadLine());
-            
+            if (root == null) 
+            {
+                root = node;
+                return;
+            }
+
+            temp = root;
+
+            while (true)
+            {
+
+
+
+                if (node.data <= temp.data)
+                {
+                    if (temp.left == null)
+                    {
+                        temp.left = node;
+                        break;
+                    }
+                    else
+                    {
+                        temp = temp.left;
+                    }
+
+                }
+                else
+                {
+                    if (temp.right == null)
+                    {
+                        temp.right = node;
+                        break;
+                    }
+                    else
+                    {
+                        temp = temp.right;
+                    }
+                }
+            }
+        }
+
+        public void Search(Node node)
+        {
 
         }
     }

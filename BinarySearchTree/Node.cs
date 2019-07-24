@@ -13,12 +13,32 @@ namespace BinarySearchTree
         public int data;
         public Node left;
         public Node right;
+        public Node temp;
+        BinarySearchTree bts = new BinarySearchTree();
+
 
         public Node(int number)
         {
             data = number;
+
+            
+            
+        }
+        public void addLeft()
+        {
+            if (data <= temp.data)
+            {
+                left = temp.Add;
+            }
         }
 
+        public void addRight()
+        {
+            if (data >= temp.data)
+            {
+                right = temp.
+            }
+        }
     }
 
 }
